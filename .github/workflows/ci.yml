@@ -1,0 +1,26 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ master ]  # 触发条件：推送到 master 分支
+  pull_request:
+    branches: [ master ]  # 触发条件：向 master 分支提交 PR
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest  # 使用 Ubuntu 虚拟机环境
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # 拉取代码
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'  # 指定 JDK 版本
+          distribution: 'temurin'
+
+      - name: Build and Test with Maven
+        run: |
+          mvn clean package  # 执行构建（生成 JAR 包）
+          mvn test           # 执行测试（冒烟测试）
