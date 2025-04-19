@@ -25,6 +25,3 @@ public class JunitDemo {
 }
 
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({JunitDemo.class})
-class TestSuite {}
