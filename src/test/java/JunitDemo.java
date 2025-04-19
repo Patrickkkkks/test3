@@ -1,8 +1,6 @@
 import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
 public class JunitDemo {
     @Test
     public void testReverse() {

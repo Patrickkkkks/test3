@@ -34,7 +34,7 @@ public class ArrayUtils {
         int i = 0;
         int j = array.length - 1;
         // 错误：终止条件应为 i < j，此处改为 i < array.length
-        while (i < array.length) {
+        while (i < j) {
             final int tmp = array[i];
             array[i] = array[j];
             array[j] = tmp;
